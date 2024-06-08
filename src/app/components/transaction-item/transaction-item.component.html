@@ -1,5 +1,5 @@
 
-  <div class="card" style="width: 18rem;" *ngIf="VociM">
+  <div class="card" style="width: 18rem;" *ngIf="VociM" [ngClass]="getSfondo()"><!--aggiunto ngClass qui per far assegnare la classe a tutta la card-->
     <div class="card-body">
       <h4 class="card-title">Name: {{VociM.business}}</h4>
       <h5 class="card-subtitle mb-2 text-body-secondary">{{VociM.name}}</h5>
