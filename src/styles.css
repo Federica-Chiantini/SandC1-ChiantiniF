@@ -1,8 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* stili per transaction-item.component */
 .inv{
     background-color: rgb(136, 249, 136);
 }
 
 .with{
     background-color: rgb(183, 183, 183);
+}
+
+.maggiore{
+    background-color: yellow;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
 }
