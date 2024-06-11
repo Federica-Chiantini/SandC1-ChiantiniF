@@ -10,15 +10,11 @@ export class TransactionItemComponent {
     @Input()
     VociM ?: cardMenu;
 
-//PER MATTEO: non sono sicura che sia il metodo migliore ma funziona, ho deciso di lasciarlo per chiederti eventualmente una spiegazione a lezione
+//PER MATTEO: ho partecipato al tutoraggio di mercoledi' 11/06 e, visto che avevo trovato online come soluzione ngClass, ho chiesto ad Antonio di mostrarmi un esempio su come usarla. Qui l'ho implementata in una maniera simile di come l'ho vista fare a lui. Nel codice di transaction-item.component.html ho inserito ngClass con operatore ternario, credo vada bene comunque. Aspetto a lezione per vedere come lo avresti fatto tu, grazie mille e a lunedi'.
 getSfondo() { 
-  if(this.VociM?.type === 'invoice'){
-          return 'inv' 
-        }
-        if(this.VociM?.type === 'withdrawal'){
-          return 'with' 
-        }else{
-          return //terzo caso in cui valore non e' uguali a quelli sovrastanti
-        }
+  return{
+    'inv' : this.VociM?.type == 'invoice', //classe 'inv' assegnata alla condizione "this.VociM?.type == 'invoice'"
+    'with' : this.VociM?.type == 'withdrawal' //classe 'with' assegnata alla condizione "this.VociM?.type == 'withdrawal'"
+  }
     }
 }
